@@ -1,0 +1,38 @@
+@import './utils/var';
+@import './utils/mixins';
+
+.users {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+
+    @include onTablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    @include onDesktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 29px;
+      max-width: 1168px;
+    }
+    @include onBigScreen {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 29px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    background-color: $color-white;
+  }
+}

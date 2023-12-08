@@ -1,0 +1,66 @@
+@import './utils/mixins';
+@import './utils/var';
+
+.banner {
+  padding-top: 40px;
+  height: 500px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../photos/pexels-alexandr-podvalny-1227513.jpeg), lightgray -446.56px -317.009px / 342.315% 164.03% no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include onTablet {
+    padding-top: 89px;
+  }
+
+  @include onDesktop {
+    padding-top: 164px;
+    margin: 0 auto;
+    height: 650px;
+    max-width: 1160px;
+  }
+  @include onBigScreen {
+    margin: 0 auto;
+    height: 650px;
+    max-width: 1160px;
+    padding-top: 164px;
+    background-position: center;
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+
+    max-width: 380px;
+
+    color: $color-white;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; 
+  }
+  &__subtitle {
+    text-align: center;
+
+    /* Body 16 */
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+  }
+
+}

@@ -1,0 +1,26 @@
+@import './utils/var';
+@import './utils/mixins';
+
+.header {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background-color: $color-white;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    margin: 4px 0;
+  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  @include onDesktop {
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+}

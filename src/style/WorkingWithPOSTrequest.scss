@@ -1,0 +1,23 @@
+@import './utils/var';
+@import './utils/mixins';
+
+.workingWithPOSTrequest {
+  padding: 140px 0 0 0;
+  
+  &__title {
+    color: $color-black-87;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 50px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

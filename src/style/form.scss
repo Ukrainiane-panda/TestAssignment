@@ -1,0 +1,174 @@
+@import './utils/var';
+@import './utils/mixins';
+
+.form {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__item {
+    position: relative;
+    display: inline-block;
+
+    &--label {
+      padding: 14px 16px;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 0.2s;
+      transition-timing-function: ease;
+      transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+      opacity: 0.5;
+      color: $color-from-placeholder;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      background-color: $color-background;
+
+      &:focus {
+        color: $color-from-placeholder;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px; 
+        border-radius: 4px;
+      }
+
+      &.input--invalid {
+        color: $color-invalid;
+      }
+    }
+
+    &--input {
+      padding: 14px 16px;
+      width: 328px;
+      height: 54px;
+      border-radius: 4px;
+      border: 1px solid $color-border;
+      background-color: $color-background;
+
+      @include onTablet {
+        width: 380px;
+      }
+      @include onDesktop {
+        width: 380px;
+      }
+      @include onBigScreen {
+        width: 380px;
+      }
+
+      &:focus,
+      &:valid {
+        color: $color-black-87;
+        font-weight: 400;
+        line-height: 26px;
+        border: 1px solid $color-border;
+      }
+
+      &.input--invalid {
+        border: 2px solid $color-invalid;
+      }
+    }
+
+    &--helper {
+      margin: 4px 0 29px 16px;
+      color: $color-from-placeholder;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  &__selecteGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 50px;
+    color: $color-black-87;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+
+    &--text {
+      margin-bottom: 4px;
+    }
+
+    &--name {
+      margin-left: 12px;
+    }
+  }
+
+  &__fileBlock {
+    display: flex;
+    margin-bottom: 50px;
+    height: 54px;
+    border-radius: 4px;
+    border: 1px solid $color-border;
+
+    &--text {
+      display: flex;
+      color: $color-from-placeholder;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      padding: 16px 14px
+    }
+  }
+
+  &__field {
+    display: block;
+
+    &--upload {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 14px;
+      width: 83px;
+      height: 54px;
+      border-radius: 4px 0px 0px 4px;
+      border: 1px solid $color-black-87;
+      cursor: pointer;
+      color: $color-black-87;
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+
+      &.input--invalid {
+        border: 2px solid $color-invalid;
+      }
+    }
+  }
+
+  &__signUp {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin-bottom: 100px;
+  }
+}
+
+.input-upload {
+  display: none;
+}
+
+input:focus + label, input:not(:placeholder-shown) + label {
+  opacity: 1;
+  transform: scale(0.75) translateY(-70%);
+}

@@ -1,0 +1,29 @@
+@import './utils/mixins';
+@import './utils/var';
+
+.success {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 100px;
+
+  &__text {
+    color:  $color-black-87;
+    text-align: center;   
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+
+    @include onDesktop {
+      max-width: 1024px;
+    }
+  }
+}

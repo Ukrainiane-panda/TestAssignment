@@ -1,0 +1,22 @@
+@import './utils/mixins';
+@import './utils/var';
+
+.custom-tooltip {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  padding: 8px;
+  border-radius: 4px;
+  background: $color-black-87;
+  color: $color-white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  display: none;
+}
+
+.custom-tooltip.show {
+  display: block;
+}
