@@ -10,7 +10,7 @@ export const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__content">
-          <a href='/'>
+          <a href='/TestAssignment'>
             <div className="header__logo logo" />
           </a>
           <div className="header__buttons">

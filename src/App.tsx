@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Banner } from './components/Banner';
 import { Header } from './components/Header';
 import { WorkingWithGETrequest } from './components/WorkingWithGETrequest';
 import { client } from './utils/fetchClient';
@@ -8,6 +7,7 @@ import { User } from './type/User';
 import './style/main.scss'
 import { WorkingWithPOSTrequest } from './components/WorkingWithPOSTrequest';
 import { Position } from './type/Position';
+import { Banner } from './components/Banner';
 
 function App() {
   const [users, setUsers] = useState<User[]>([]);
